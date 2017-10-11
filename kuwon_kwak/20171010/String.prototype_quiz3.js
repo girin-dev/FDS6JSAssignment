@@ -6,23 +6,30 @@ s의 길이가 4 ~ 6이고, 숫자로만 구성되어 있는지 확인하는 함
 */
 
 function alphaString46(s) {
-    if (s === undefined) {
-        return false;
-    } else {
-        var checkNum = 0;
-        for (i = 0; i < 6; i++) {
-            if (Number.isInteger(parseInt(s[i])) === true) {
-                checkNum = checkNum + 1;
-            }
-        }
-        if (checkNum > 3) {
-            return true;
-        } else {
-            return false;
+    // isNaN 써보시길
+    s += ''
+    var checkNum = 0;
+    for (i = 0; i < 6; i++) {
+        if (Number.isInteger(parseInt(s[i])) === true) {
+            checkNum = checkNum + 1;
         }
     }
+    if (checkNum > 3 && checkNum < 7) {
+        return true;
+    } else {
+        return false;
+    }
+
+    // isNaN 써본 방법
+    if (!s) return false;
+    var len = s.length;
+    return (len >= 4 && len <= 6) && !isNaN(s);
+
+    // 정규표현식을 활용한 방법
+    return /^\d{4, 6}$/.test(s);
 }
 
+console.log(alphaString46('123412'));
 console.log(alphaString46('1234')); // true
 console.log(alphaString46('9014')); // true
 console.log(alphaString46('723')); // false

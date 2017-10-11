@@ -21,16 +21,16 @@ function getCount8() {
     }
     console.log(n);
 
-    //   이중 for문을 쓰지 않고 하는 방식 (미완)
-    // var n = 0
-    // for (str = 1; str <= 10000; str++) {
-    //     var a = str + '';
-    // }
-    // for (i = 0; i < a.length; i++) {
-    //     if (a[i] == 8) {
-    //         n += 1;
-    //     }
-    // };
-    // console.log(n);
+    // 이중 for문을 쓰지 않고 하는 방식 (미완)
+    var n = 0
+    for (str = 1; str <= 10000; str++) {
+        var a = str + '';
+    }
+    for (i = 0; i < a.length; i++) {
+        if (a[i] == 8) {
+            n += 1;
+        }
+    };
+    console.log(n);
 }
 console.log(getCount8()); // 4000
