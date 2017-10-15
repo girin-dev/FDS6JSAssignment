@@ -8,8 +8,9 @@
 
 (hint) 문자열 중 n번째에 있는 문자 : str.charAt(n) or str[n]
 */
+
+// 내 방식
 function getCount8() {
-    //   내 방식
     var n = 0;
     for (str = 1; str <= 10000; str++) {
         str = str + ''
@@ -20,8 +21,10 @@ function getCount8() {
         }
     }
     console.log(n);
+}
 
-    // 이중 for문을 쓰지 않고 하는 방식 (미완)
+// 이중 for문을 쓰지 않고 하는 방식 (미완)
+function getCount8() {
     var n = 0
     for (str = 1; str <= 10000; str++) {
         var a = str + '';
@@ -33,4 +36,10 @@ function getCount8() {
     };
     console.log(n);
 }
+
+// 함수표현식과 정규식 표현을 활용하는 방식(임기완 조교님)
+var getCount8 = function() {
+
+}
+
 console.log(getCount8()); // 4000

@@ -17,8 +17,14 @@ function toWeirdCase(str) {
     return result;
 }
 
+// 임기완 조교님 방법
+// 공백이 복수로 연달아 있거나 ,. 등이 들어갈 경우를 생각해 정규표현식을 활용.
+
+
+
 console.log(toWeirdCase('hello world')); // 'HeLlO WoRlD'
 console.log(toWeirdCase('my name is lee')); // 'My NaMe Is LeE'
 console.log(toWeirdCase('Battle cuiser and carrier')); // BaTtLe CuIsEr AnD CaRrIeR
 console.log(toWeirdCase('Star bucks')); // StAr BuCkS
-console.log(toWeirdCase('fast campus crews')); // FaSt CaMpUs CrEwS
+console.log(toWeirdCase('fast     campus     crews')); // FaSt CaMpUs CrEwS
+console.log(toWeirdCase('f,a,.st   smf,.  campus     crews')); // FaSt CaMpUs CrEwS

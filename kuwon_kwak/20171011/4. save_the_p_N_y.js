@@ -27,6 +27,10 @@ function numPY(s) {
     return ((s.match(regexp_p) ? s.match(regexp_p).length : 0) === (s.match(regexp_y) ? s.match(regexp_y).length : 0));
 }
 
+// 임기완 조교님의 방법
+// 특정 문자의 수를 세어주는 함수를 만들고 그 함수를 numPY()에 넣었다.
+// 정규표현식을 쓰지 않고 정규식 객체를 만드는 생성자 함수도 활용
+
 console.log(numPY('pPoooyY')); // true
 console.log(numPY('Pyy')); // false
 console.log(numPY('ab')); // true

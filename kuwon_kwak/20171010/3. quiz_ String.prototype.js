@@ -5,8 +5,8 @@ s의 길이가 4 ~ 6이고, 숫자로만 구성되어 있는지 확인하는 함
 예를 들어 s가 'a234'이면 false를 리턴하고 '1234'라면 true를 리턴한다
 */
 
+// 처음 접근한 방식. isNaN 써보시길
 function alphaString46(s) {
-    // isNaN 써보시길
     s += ''
     var checkNum = 0;
     for (i = 0; i < 6; i++) {
@@ -19,13 +19,17 @@ function alphaString46(s) {
     } else {
         return false;
     }
+}
 
-    // isNaN 써본 방법
+// isNaN 써본 방법
+function alphaString46(s) {
     if (!s) return false;
     var len = s.length;
     return (len >= 4 && len <= 6) && !isNaN(s);
+}
 
-    // 정규표현식을 활용한 방법
+// 정규표현식을 활용한 방법
+function alphaString46(s) {
     return /^\d{4, 6}$/.test(s);
 }
 

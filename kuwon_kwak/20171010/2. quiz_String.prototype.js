@@ -20,9 +20,14 @@ console.log(evenOrOdd(3)); // Odd
 console.log(evenOrOdd(1000)); // Even
 
 // 3항 연산자
+// Ternary, Conditional Operator
 function evenOrOdd_tri(num) {
     return ((num % 2 === 0) ? "Even" : "Odd");
+
+    // 1은 true, 0은 false로 처리하는 자바스크립트의 특성 활용 가능
+    // return ((num % 2) ? "Odd" : "Even");
 }
+
 
 console.log(evenOrOdd_tri(2)); // Even
 console.log(evenOrOdd_tri(3)); // Odd
