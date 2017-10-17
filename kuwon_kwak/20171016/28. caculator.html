@@ -1,0 +1,36 @@
+<!-- 
+28. 더하기 결과를 확인하여 그 결과(‘정답’ 또는 ‘오답’)를 alert으로 표시하는 기능을 구현하라. 
+    단, pure javascript 버전과 jQuery 버전 두가지를 완성하여야 한다. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="first" name="prev"> + <input type="text" id="second" name="last"> = <input type="text" id="answer" name="result">
+    <button id="check">확인</button>
+    <em id="check-result"></em>
+    <script>
+        // id 써서 만들기 
+        var chk = document.getElementById('check');
+        var res = document.getElementById('check-result');
+        chk.addEventListener('click', function() {
+            var one = parseInt(document.getElementById('first').value);
+            var two = parseInt(document.getElementById('second').value);
+            var ans = parseInt(document.getElementById('answer').value);
+            (ans === one + two) ? res.innerHTML = '정답': res.innerHTML = '오답';
+        });
+
+        // id 없이 만들기
+        // 어트리뷰트 선택자 input[type=text]
+        var btn_chk = document.querySelector('em');
+    </script>
+</body>
+
+</html>
