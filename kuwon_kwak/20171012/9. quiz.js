@@ -6,14 +6,14 @@
 
 // 3항 연산자 활용
 function nextSqaure(n) {
-    return Number.isInteger(Math.sqrt(n)) ? Math.pow((Math.sqrt(n) + 1), 2) : 'no'
+    return Number.isInteger(Math.sqrt(n)) ? Math.pow((Math.sqrt(n) + 1), 2) : 'no';
 }
 // if문 활용
 function nextSqaure(n) {
     if (Number.isInteger(Math.sqrt(n))) {
-        return Math.pow((Math.sqrt(n) + 1), 2)
+        return Math.pow((Math.sqrt(n) + 1), 2);
     } else {
-        return 'no'
+        return 'no';
     }
 }
 

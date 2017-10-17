@@ -5,11 +5,11 @@
 // 단, 반드시 1자 이상의 문자열을 인자로 전달한다.
 
 function checkPalindrom(str) {
-    return (str === str.split('').reverse().join(''));
+    return str.length === 1 ? false : (str === str.split('').reverse().join(''));
 }
 
-console.log(checkPalindrom('dad'));
-console.log(checkPalindrom('mom'));
-console.log(checkPalindrom('palidrom'));
-console.log(checkPalindrom('s'));
-console.log(checkPalindrom('나야나'));
+console.log(checkPalindrom('dad')); // true
+console.log(checkPalindrom('mom')); // true
+console.log(checkPalindrom('palidrom')); // false
+console.log(checkPalindrom('s')); // false
+console.log(checkPalindrom('나야나')); // true
