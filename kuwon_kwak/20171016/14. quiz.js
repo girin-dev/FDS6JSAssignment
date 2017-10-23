@@ -6,6 +6,7 @@
 // 2 이상의 n이 입력되었을 때, fibonacci 함수를 작성하여 n번째 피보나치 수를 반환하라. 예를 들어 n = 3 이라면 2 를 반환한다.
 
 // 재귀함수 활용
+// 재귀함수는 자신을 정의할 때 자기 자신을 재참조하는 방법을 뜻한다.(https://ko.wikipedia.org/wiki/재귀함수)
 function fibonacci(n) {
     if (n === 1 || n === 2) {
         return 1;

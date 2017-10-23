@@ -18,7 +18,7 @@ function isHarshad(n) {
     for (i = 0; i < str.length; i++) {
         num += parseInt(str[i]);
     }
-    return (n % num === 0);
+    return !(n % num);
 }
 
 console.log(isHarshad(10)); // true

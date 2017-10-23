@@ -9,15 +9,18 @@
 
 // 예를 들어 10을 입력받았다면, 1부터 10 사이의 소수는 [2,3,5,7] 4개가 존재하므로 4를 반환한다.
 
+// 약수를 2개만 갖고 있는 수를 구하는 식으로 접근
 function numberOfPrime(n) {
     var result = [];
     for (i = 1; i <= n; i++) {
         var res = [];
+        // 약수를 구하는 내부 for문
         for (j = 1; j <= i; j++) {
             if (i % j === 0) {
                 res.push(j);
             }
         }
+        // 받아온 약수를 배열로 묶은 것들 중 그 갯수(length)가 2개인 배열을 골라서 각 배열의 마지막 수를 result 배열에 넣는 if문
         if (res.length === 2) {
             var primeNumber = res[res.length - 1];
             result.push(primeNumber);
@@ -26,5 +29,10 @@ function numberOfPrime(n) {
     return result.length;
 }
 
+// 임기완 조교님 방식
+function numberOfPrime(n) {
 
-console.log(numberOfPrime(20)); // 4
+}
+
+
+console.log(numberOfPrime(10)); // 4
